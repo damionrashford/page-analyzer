@@ -1,0 +1,19 @@
+{
+  "name": "page-analyzer",
+  "version": "1.0.0",
+  "description": "Advanced web page analyzer bookmarklet with Remote DOM",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:host && npm run build:remote",
+    "build:host": "BUILD_TARGET=host vite build",
+    "build:remote": "BUILD_TARGET=remote vite build",
+    "dev": "vite build --watch"
+  },
+  "dependencies": {
+    "@remote-dom/core": "^1.5.1"
+  },
+  "devDependencies": {
+    "terser": "^5.44.1",
+    "vite": "^5.4.21"
+  }
+}
