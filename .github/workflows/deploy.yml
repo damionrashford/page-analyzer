@@ -116,13 +116,22 @@ jobs:
           path: dist/
           retention-days: 30
 
-      - name: Update host.js with Gist URL
+      - name: Update host.js and README with Gist URLs
         run: |
           REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
+          HOST_URL="${{ steps.gist.outputs.host_url }}"
+          GIST_ID="${{ steps.gist.outputs.gist_id }}"
+          
           sed -i.bak "s|https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/remote.html|$REMOTE_HTML_URL|g" src/host/host.js
           rm src/host/host.js.bak
+          
+          BOOKMARKLET_CODE="javascript:(function(){var s=document.createElement('script');s.src='$HOST_URL';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();"
+          
+          sed -i.bak "s|https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js|$HOST_URL|g" README.md
+          rm README.md.bak
+          
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/host/host.js
-          git commit -m "Update host.js with Gist URL from deployment" || echo "No changes to commit"
+          git add src/host/host.js README.md
+          git commit -m "Update host.js and README with Gist URLs from deployment" || echo "No changes to commit"
           git push || echo "Nothing to push"

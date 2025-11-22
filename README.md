@@ -1,14 +1,20 @@
 # Page Analyzer
 
-A powerful browser bookmarklet that provides comprehensive web page analysis and developer tools directly in your browser. Analyze any webpage's DOM structure, network activity, performance metrics, accessibility, SEO, and security - all without leaving the page.
+A powerful browser bookmarklet that provides comprehensive web page analysis and
+developer tools directly in your browser. Analyze any webpage's DOM structure,
+network activity, performance metrics, accessibility, SEO, and security - all
+without leaving the page.
 
 ## What is Page Analyzer?
 
-Page Analyzer is a bookmarklet that adds a professional developer tools overlay to any webpage. Simply click the bookmarklet and instantly access 9 powerful analysis tools in a draggable, resizable panel.
+Page Analyzer is a bookmarklet that adds a professional developer tools overlay
+to any webpage. Simply click the bookmarklet and instantly access 9 powerful
+analysis tools in a draggable, resizable panel.
 
 ## Features
 
 ### 🔍 DOM Inspector
+
 - Visual element selection by hovering over the page
 - Interactive DOM tree viewer
 - Element properties panel with computed styles
@@ -16,6 +22,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Real-time element highlighting
 
 ### 🌐 Network Monitor
+
 - Intercepts and logs all network requests (fetch and XHR)
 - View request/response details, timing, and size
 - Filter by request type
@@ -23,6 +30,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Click any request to see full details
 
 ### ⚡ Performance Analyzer
+
 - Page load metrics (DNS, TCP, SSL, TTFB, download time)
 - Resource timing for all loaded assets
 - Paint timing (First Paint, First Contentful Paint)
@@ -30,6 +38,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Export performance data as JSON
 
 ### 💬 Console Capture
+
 - Captures all console logs, errors, warnings, and info messages
 - Filter logs by level (log, error, warn, info, debug)
 - View timestamps and stack traces
@@ -37,6 +46,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Real-time log streaming
 
 ### 💾 Storage Inspector
+
 - View and edit localStorage items
 - View and edit sessionStorage items
 - View and manage cookies
@@ -44,6 +54,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Delete individual items
 
 ### ℹ️ Page Information
+
 - Complete page metadata (URL, title, protocol, host)
 - All meta tags with content
 - Viewport dimensions and device information
@@ -51,6 +62,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - User agent and browser details
 
 ### ♿ Accessibility Audit
+
 - Accessibility score (0-100)
 - Detects missing alt text on images
 - Checks heading structure (H1-H6)
@@ -59,6 +71,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Export accessibility report as JSON
 
 ### 🔎 SEO Analyzer
+
 - SEO score with detailed analysis
 - Meta tags validation (title, description, Open Graph)
 - Heading structure analysis
@@ -68,6 +81,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Export SEO report as JSON
 
 ### 🔒 Security Checker
+
 - Security score assessment
 - HTTPS and secure context detection
 - Mixed content detection
@@ -76,6 +90,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 - Export security report as JSON
 
 ### 📸 Screenshot
+
 - Capture full page screenshots
 - Capture individual element screenshots
 - Automatic download as PNG
@@ -83,14 +98,38 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 
 ## Installation
 
-### Step 1: Get the Bookmarklet Code
+### Quick Install (Drag & Drop)
 
-1. Open the `bookmarklet.js` file above
-2. Copy the entire contents (the code that starts with `javascript:`)
+**Simply drag the button below to your bookmarks bar:**
 
-### Step 2: Create the Bookmark
+<div align="center">
+  <a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();"
+     style="display: inline-block; padding: 12px 24px; background: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: move;"
+     draggable="true"
+     onmouseover="this.style.background='#0052a3'"
+     onmouseout="this.style.background='#0066cc'">📌 Drag to Bookmarks Bar</a>
+</div>
+
+**Instructions:**
+
+1. Make sure your bookmarks bar is visible (Ctrl+Shift+B / Cmd+Shift+B)
+2. Drag the button above to your bookmarks bar
+3. Done! Click it on any webpage to analyze it
+
+### Manual Installation (Alternative Method)
+
+If drag-and-drop doesn't work, you can manually create the bookmark:
+
+**Step 1: Get the Bookmarklet Code**
+
+1. Right-click on the button above and select "Copy link address" (or "Copy
+   link")
+2. This copies the bookmarklet code to your clipboard
+
+**Step 2: Create the Bookmark
 
 **Chrome/Edge:**
+
 1. Right-click your bookmarks bar
 2. Select "Add page" or "Add bookmark"
 3. Name it "Page Analyzer"
@@ -98,6 +137,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 5. Click "Save"
 
 **Firefox:**
+
 1. Right-click your bookmarks toolbar
 2. Select "New Bookmark"
 3. Name it "Page Analyzer"
@@ -105,6 +145,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 5. Click "Save"
 
 **Safari:**
+
 1. Right-click your bookmarks bar
 2. Select "Add Bookmark"
 3. Name it "Page Analyzer"
@@ -129,6 +170,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 ### Navigating Tabs
 
 Click any tab at the top to switch between tools:
+
 - 🔍 **DOM** - Inspect page elements
 - 🌐 **Network** - Monitor network requests
 - ⚡ **Performance** - View performance metrics
@@ -153,6 +195,7 @@ Click any tab at the top to switch between tools:
 ### Command Palette
 
 Press `Cmd/Ctrl + K` to open the command palette. Type to search for:
+
 - Open any tool tab
 - Toggle theme
 - Export data
@@ -164,6 +207,7 @@ Use arrow keys to navigate, Enter to select, Escape to close.
 ### Exporting Data
 
 Most tools include export functionality:
+
 - **Network**: Export as HAR file
 - **Performance**: Export as JSON
 - **Console**: Export logs as JSON
@@ -176,11 +220,14 @@ Click the "Export" button in any tool to download the data.
 ### Taking Screenshots
 
 - **Full Page**: Use command palette (`Cmd/Ctrl + K`) → "Take Screenshot"
-- **Element Screenshot**: In DOM Inspector, select an element, then click "Screenshot Element" button
+- **Element Screenshot**: In DOM Inspector, select an element, then click
+  "Screenshot Element" button
 
 ### Theme
 
-The analyzer automatically detects your system theme preference. You can manually toggle between dark and light themes:
+The analyzer automatically detects your system theme preference. You can
+manually toggle between dark and light themes:
+
 - Use keyboard shortcut: `Cmd/Ctrl + Shift + T`
 - Or use command palette: `Cmd/Ctrl + K` → "Toggle Theme"
 
@@ -188,51 +235,64 @@ Your theme preference is saved and will persist across sessions.
 
 ## Tips
 
-1. **DOM Inspector**: Hover over elements on the page to see them highlighted. Click to select and view properties.
+1. **DOM Inspector**: Hover over elements on the page to see them highlighted.
+   Click to select and view properties.
 
-2. **Network Monitor**: Starts capturing immediately when opened. Click "Clear" to reset the log.
+2. **Network Monitor**: Starts capturing immediately when opened. Click "Clear"
+   to reset the log.
 
-3. **Performance**: Metrics are calculated from page load. Refresh the page after opening the analyzer for most accurate results.
+3. **Performance**: Metrics are calculated from page load. Refresh the page
+   after opening the analyzer for most accurate results.
 
-4. **Console**: Captures logs in real-time. Use the filter dropdown to show only specific log levels.
+4. **Console**: Captures logs in real-time. Use the filter dropdown to show only
+   specific log levels.
 
-5. **Storage**: Double-click any value to edit it. Changes are saved immediately.
+5. **Storage**: Double-click any value to edit it. Changes are saved
+   immediately.
 
-6. **Accessibility/SEO/Security**: Click "Export" to save detailed reports for documentation or sharing.
+6. **Accessibility/SEO/Security**: Click "Export" to save detailed reports for
+   documentation or sharing.
 
 ## Browser Compatibility
 
 Page Analyzer works in all modern browsers:
+
 - Chrome/Edge (Chromium) - Full support
 - Firefox - Full support
 - Safari - Full support
 
 ## Privacy
 
-Page Analyzer runs entirely in your browser. No data is sent to any external servers. All analysis happens locally on your device.
+Page Analyzer runs entirely in your browser. No data is sent to any external
+servers. All analysis happens locally on your device.
 
 ## Troubleshooting
 
 **Panel doesn't appear:**
+
 - Check browser console for errors
 - Ensure the bookmarklet code is complete and unmodified
 - Try refreshing the page and clicking the bookmarklet again
 
 **Network requests not showing:**
+
 - Network Monitor only captures requests made after it's opened
 - Refresh the page or navigate to trigger new requests
 
 **Screenshot not working:**
+
 - Some sites with strict Content Security Policy may block screenshots
 - Try taking element screenshots instead of full page
 
 **Theme not changing:**
+
 - Clear browser cache and localStorage
 - Try manually toggling with `Cmd/Ctrl + Shift + T`
 
 ## Support
 
-For issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/damionrashford/page-analyzer).
+For issues, feature requests, or contributions, please visit the
+[GitHub repository](https://github.com/damionrashford/page-analyzer).
 
 ## License
 
