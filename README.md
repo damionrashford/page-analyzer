@@ -102,17 +102,21 @@ analysis tools in a draggable, resizable panel.
 
 **Simply drag the link below to your bookmarks bar:**
 
-<div align="center">
+<div align="center" style="margin: 20px 0;">
 
-### [📌 Drag to Bookmarks Bar](javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/6fc6c613bdc6add6c94e36de4a09d0a5/raw/fb369170bde6175055b195712b83d7f2d3ed7235/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();)
+<a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();"
+   style="display: inline-block; padding: 14px 28px; background: #0066cc; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: move;">📌
+Drag to Bookmarks Bar</a>
 
 </div>
 
 **Instructions:**
 
-1. Make sure your bookmarks bar is visible (Ctrl+Shift+B / Cmd+Shift+B)
-2. Drag the button above to your bookmarks bar
-3. Done! Click it on any webpage to analyze it
+<ol>
+<li>Make sure your bookmarks bar is visible (<kbd>Ctrl+Shift+B</kbd> / <kbd>Cmd+Shift+B</kbd>)</li>
+<li>Drag the button above to your bookmarks bar</li>
+<li>Done! Click it on any webpage to analyze it</li>
+</ol>
 
 ### Manual Installation (Alternative Method)
 
@@ -120,85 +124,102 @@ If drag-and-drop doesn't work, you can manually create the bookmark:
 
 **Step 1: Get the Bookmarklet Code**
 
-1. Right-click on the button above and select "Copy link address" (or "Copy
-   link")
-2. This copies the bookmarklet code to your clipboard
+<ol>
+<li>Right-click on the button above and select "Copy link address" (or "Copy link")</li>
+<li>This copies the bookmarklet code to your clipboard</li>
+</ol>
 
-**Step 2: Create the Bookmark
+**Step 2: Create the Bookmark**
 
 **Chrome/Edge:**
 
-1. Right-click your bookmarks bar
-2. Select "Add page" or "Add bookmark"
-3. Name it "Page Analyzer"
-4. Paste the bookmarklet code into the URL field
-5. Click "Save"
+<ol>
+<li>Right-click your bookmarks bar</li>
+<li>Select "Add page" or "Add bookmark"</li>
+<li>Name it "Page Analyzer"</li>
+<li>Paste the bookmarklet code into the URL field</li>
+<li>Click "Save"</li>
+</ol>
 
 **Firefox:**
 
-1. Right-click your bookmarks toolbar
-2. Select "New Bookmark"
-3. Name it "Page Analyzer"
-4. Paste the bookmarklet code into the "Location" field
-5. Click "Save"
+<ol>
+<li>Right-click your bookmarks toolbar</li>
+<li>Select "New Bookmark"</li>
+<li>Name it "Page Analyzer"</li>
+<li>Paste the bookmarklet code into the "Location" field</li>
+<li>Click "Save"</li>
+</ol>
 
 **Safari:**
 
-1. Right-click your bookmarks bar
-2. Select "Add Bookmark"
-3. Name it "Page Analyzer"
-4. Edit the bookmark and paste the code into the URL field
+<ol>
+<li>Right-click your bookmarks bar</li>
+<li>Select "Add Bookmark"</li>
+<li>Name it "Page Analyzer"</li>
+<li>Edit the bookmark and paste the code into the URL field</li>
+</ol>
 
 ## Usage
 
 ### Opening Page Analyzer
 
-1. Navigate to any webpage you want to analyze
-2. Click the "Page Analyzer" bookmarklet in your bookmarks bar
-3. The analyzer panel will appear in the bottom-right corner
+<ol>
+<li>Navigate to any webpage you want to analyze</li>
+<li>Click the "Page Analyzer" bookmarklet in your bookmarks bar</li>
+<li>The analyzer panel will appear in the bottom-right corner</li>
+</ol>
 
 ### Using the Panel
 
-- **Drag**: Click and drag the header to move the panel
-- **Resize**: Drag the bottom-right corner to resize
-- **Minimize**: Click the minimize button (−) to collapse
-- **Maximize**: Click the maximize button (□) to fill the screen
-- **Close**: Click the close button (×) to hide the panel
+<ul>
+<li><strong>Drag</strong>: Click and drag the header to move the panel</li>
+<li><strong>Resize</strong>: Drag the bottom-right corner to resize</li>
+<li><strong>Minimize</strong>: Click the minimize button (−) to collapse</li>
+<li><strong>Maximize</strong>: Click the maximize button (□) to fill the screen</li>
+<li><strong>Close</strong>: Click the close button (×) to hide the panel</li>
+</ul>
 
 ### Navigating Tabs
 
 Click any tab at the top to switch between tools:
 
-- 🔍 **DOM** - Inspect page elements
-- 🌐 **Network** - Monitor network requests
-- ⚡ **Performance** - View performance metrics
-- 💬 **Console** - View console logs
-- 💾 **Storage** - Inspect storage
-- ℹ️ **Info** - Page information
-- ♿ **A11y** - Accessibility audit
-- 🔎 **SEO** - SEO analysis
-- 🔒 **Security** - Security check
+<ul>
+<li>🔍 <strong>DOM</strong> - Inspect page elements</li>
+<li>🌐 <strong>Network</strong> - Monitor network requests</li>
+<li>⚡ <strong>Performance</strong> - View performance metrics</li>
+<li>💬 <strong>Console</strong> - View console logs</li>
+<li>💾 <strong>Storage</strong> - Inspect storage</li>
+<li>ℹ️ <strong>Info</strong> - Page information</li>
+<li>♿ <strong>A11y</strong> - Accessibility audit</li>
+<li>🔎 <strong>SEO</strong> - SEO analysis</li>
+<li>🔒 <strong>Security</strong> - Security check</li>
+</ul>
 
 ### Keyboard Shortcuts
 
-- **`Cmd/Ctrl + K`** - Open command palette (quick access to all features)
-- **`Cmd/Ctrl + Shift + D`** - Switch to DOM Inspector
-- **`Cmd/Ctrl + Shift + N`** - Switch to Network Monitor
-- **`Cmd/Ctrl + Shift + P`** - Switch to Performance
-- **`Cmd/Ctrl + Shift + C`** - Switch to Console
-- **`Cmd/Ctrl + Shift + S`** - Switch to Storage
-- **`Cmd/Ctrl + Shift + T`** - Toggle dark/light theme
-- **`Escape`** - Close command palette or close panel
+<ul>
+<li><strong><kbd>Cmd/Ctrl + K</kbd></strong> - Open command palette (quick access to all features)</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + D</kbd></strong> - Switch to DOM Inspector</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + N</kbd></strong> - Switch to Network Monitor</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + P</kbd></strong> - Switch to Performance</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + C</kbd></strong> - Switch to Console</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + S</kbd></strong> - Switch to Storage</li>
+<li><strong><kbd>Cmd/Ctrl + Shift + T</kbd></strong> - Toggle dark/light theme</li>
+<li><strong><kbd>Escape</kbd></strong> - Close command palette or close panel</li>
+</ul>
 
 ### Command Palette
 
-Press `Cmd/Ctrl + K` to open the command palette. Type to search for:
+Press <kbd>Cmd/Ctrl + K</kbd> to open the command palette. Type to search for:
 
-- Open any tool tab
-- Toggle theme
-- Export data
-- Take screenshots
-- And more...
+<ul>
+<li>Open any tool tab</li>
+<li>Toggle theme</li>
+<li>Export data</li>
+<li>Take screenshots</li>
+<li>And more...</li>
+</ul>
 
 Use arrow keys to navigate, Enter to select, Escape to close.
 
@@ -206,58 +227,56 @@ Use arrow keys to navigate, Enter to select, Escape to close.
 
 Most tools include export functionality:
 
-- **Network**: Export as HAR file
-- **Performance**: Export as JSON
-- **Console**: Export logs as JSON
-- **Accessibility**: Export report as JSON
-- **SEO**: Export report as JSON
-- **Security**: Export report as JSON
+<ul>
+<li><strong>Network</strong>: Export as HAR file</li>
+<li><strong>Performance</strong>: Export as JSON</li>
+<li><strong>Console</strong>: Export logs as JSON</li>
+<li><strong>Accessibility</strong>: Export report as JSON</li>
+<li><strong>SEO</strong>: Export report as JSON</li>
+<li><strong>Security</strong>: Export report as JSON</li>
+</ul>
 
 Click the "Export" button in any tool to download the data.
 
 ### Taking Screenshots
 
-- **Full Page**: Use command palette (`Cmd/Ctrl + K`) → "Take Screenshot"
-- **Element Screenshot**: In DOM Inspector, select an element, then click
-  "Screenshot Element" button
+<ul>
+<li><strong>Full Page</strong>: Use command palette (<kbd>Cmd/Ctrl + K</kbd>) → "Take Screenshot"</li>
+<li><strong>Element Screenshot</strong>: In DOM Inspector, select an element, then click "Screenshot Element" button</li>
+</ul>
 
 ### Theme
 
 The analyzer automatically detects your system theme preference. You can
 manually toggle between dark and light themes:
 
-- Use keyboard shortcut: `Cmd/Ctrl + Shift + T`
-- Or use command palette: `Cmd/Ctrl + K` → "Toggle Theme"
+<ul>
+<li>Use keyboard shortcut: <kbd>Cmd/Ctrl + Shift + T</kbd></li>
+<li>Or use command palette: <kbd>Cmd/Ctrl + K</kbd> → "Toggle Theme"</li>
+</ul>
 
 Your theme preference is saved and will persist across sessions.
 
 ## Tips
 
-1. **DOM Inspector**: Hover over elements on the page to see them highlighted.
-   Click to select and view properties.
-
-2. **Network Monitor**: Starts capturing immediately when opened. Click "Clear"
-   to reset the log.
-
-3. **Performance**: Metrics are calculated from page load. Refresh the page
-   after opening the analyzer for most accurate results.
-
-4. **Console**: Captures logs in real-time. Use the filter dropdown to show only
-   specific log levels.
-
-5. **Storage**: Double-click any value to edit it. Changes are saved
-   immediately.
-
-6. **Accessibility/SEO/Security**: Click "Export" to save detailed reports for
-   documentation or sharing.
+<ol>
+<li><strong>DOM Inspector</strong>: Hover over elements on the page to see them highlighted. Click to select and view properties.</li>
+<li><strong>Network Monitor</strong>: Starts capturing immediately when opened. Click "Clear" to reset the log.</li>
+<li><strong>Performance</strong>: Metrics are calculated from page load. Refresh the page after opening the analyzer for most accurate results.</li>
+<li><strong>Console</strong>: Captures logs in real-time. Use the filter dropdown to show only specific log levels.</li>
+<li><strong>Storage</strong>: Double-click any value to edit it. Changes are saved immediately.</li>
+<li><strong>Accessibility/SEO/Security</strong>: Click "Export" to save detailed reports for documentation or sharing.</li>
+</ol>
 
 ## Browser Compatibility
 
 Page Analyzer works in all modern browsers:
 
-- Chrome/Edge (Chromium) - Full support
-- Firefox - Full support
-- Safari - Full support
+<ul>
+<li>Chrome/Edge (Chromium) - Full support</li>
+<li>Firefox - Full support</li>
+<li>Safari - Full support</li>
+</ul>
 
 ## Privacy
 
@@ -266,31 +285,45 @@ servers. All analysis happens locally on your device.
 
 ## Troubleshooting
 
-**Panel doesn't appear:**
+<dl>
+<dt><strong>Panel doesn't appear:</strong></dt>
+<dd>
+<ul>
+<li>Check browser console for errors</li>
+<li>Ensure the bookmarklet code is complete and unmodified</li>
+<li>Try refreshing the page and clicking the bookmarklet again</li>
+</ul>
+</dd>
 
-- Check browser console for errors
-- Ensure the bookmarklet code is complete and unmodified
-- Try refreshing the page and clicking the bookmarklet again
+<dt><strong>Network requests not showing:</strong></dt>
+<dd>
+<ul>
+<li>Network Monitor only captures requests made after it's opened</li>
+<li>Refresh the page or navigate to trigger new requests</li>
+</ul>
+</dd>
 
-**Network requests not showing:**
+<dt><strong>Screenshot not working:</strong></dt>
+<dd>
+<ul>
+<li>Some sites with strict Content Security Policy may block screenshots</li>
+<li>Try taking element screenshots instead of full page</li>
+</ul>
+</dd>
 
-- Network Monitor only captures requests made after it's opened
-- Refresh the page or navigate to trigger new requests
-
-**Screenshot not working:**
-
-- Some sites with strict Content Security Policy may block screenshots
-- Try taking element screenshots instead of full page
-
-**Theme not changing:**
-
-- Clear browser cache and localStorage
-- Try manually toggling with `Cmd/Ctrl + Shift + T`
+<dt><strong>Theme not changing:</strong></dt>
+<dd>
+<ul>
+<li>Clear browser cache and localStorage</li>
+<li>Try manually toggling with <kbd>Cmd/Ctrl + Shift + T</kbd></li>
+</ul>
+</dd>
+</dl>
 
 ## Support
 
 For issues, feature requests, or contributions, please visit the
-[GitHub repository](https://github.com/damionrashford/page-analyzer).
+<a href="https://github.com/damionrashford/page-analyzer">GitHub repository</a>.
 
 ## License
 
