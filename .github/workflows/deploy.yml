@@ -116,15 +116,6 @@ jobs:
           path: dist/
           retention-days: 30
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
-          include_path: install.html
-
       - name: Update host.js, README, and install.html with Gist URLs
         run: |
           REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
@@ -147,3 +138,14 @@ jobs:
           git add src/host/host.js README.md install.html
           git commit -m "Update host.js, README, and install.html with Gist URLs from deployment" || echo "No changes to commit"
           git push || echo "Nothing to push"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          keep_files: false
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
