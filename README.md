@@ -83,9 +83,9 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 
 ## Installation
 
-### Step 1: Get the Bookmarklet
+### Step 1: Get the Bookmarklet Code
 
-1. Visit the [GitHub repository](https://github.com/damionrashford/page-analyzer) to get the bookmarklet code
+1. Look for the bookmarklet code in this repository (check the `dist/` folder or the main `bookmarklet.js` file)
 2. Copy the complete bookmarklet code (it starts with `javascript:`)
 
 ### Step 2: Create the Bookmark
