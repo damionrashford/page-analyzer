@@ -80,18 +80,18 @@ jobs:
             
             const gistUrl = gist.data.html_url;
             const gistIdOutput = gist.data.id;
-            const hostRawUrl = gist.data.files['host.min.js'].raw_url;
-            const remoteHtmlRawUrl = gist.data.files['remote.html'].raw_url;
+            const hostUrl = `https://gist.githubusercontent.com/damionrashford/${gistIdOutput}/raw/host.min.js`;
+            const remoteHtmlUrl = `https://gist.githubusercontent.com/damionrashford/${gistIdOutput}/raw/remote.html`;
             
             console.log(`Gist URL: ${gistUrl}`);
             console.log(`Gist ID: ${gistIdOutput}`);
-            console.log(`Host JS URL: ${hostRawUrl}`);
-            console.log(`Remote HTML URL: ${remoteHtmlRawUrl}`);
+            console.log(`Host JS URL: ${hostUrl}`);
+            console.log(`Remote HTML URL: ${remoteHtmlUrl}`);
             
             core.setOutput('gist_id', gistIdOutput);
             core.setOutput('gist_url', gistUrl);
-            core.setOutput('host_url', hostRawUrl);
-            core.setOutput('remote_html_url', remoteHtmlRawUrl)
+            core.setOutput('host_url', hostUrl);
+            core.setOutput('remote_html_url', remoteHtmlUrl)
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
 
