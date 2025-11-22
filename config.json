@@ -1,73 +1,17 @@
 {
   "urls": {
     "gist": {
-      "base": "https://gist.githubusercontent.com/damionrashford",
-      "hostJs": {
-        "placeholder": "https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js",
-        "description": "URL for the host.min.js file loaded by the bookmarklet"
-      },
-      "remoteHtml": {
-        "placeholder": "https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/remote.html",
-        "description": "URL for the remote.html file loaded in the iframe"
-      }
+      "hostJs": "https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js",
+      "remoteHtml": "https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/remote.html"
     },
     "githubPages": {
-      "base": "https://damionrashford.github.io/page-analyzer",
-      "installPage": {
-        "url": "https://damionrashford.github.io/page-analyzer/install.html",
-        "description": "GitHub Pages URL for the installation page"
-      }
+      "installPage": "https://damionrashford.github.io/page-analyzer/install.html"
     },
     "github": {
-      "repository": {
-        "url": "https://github.com/damionrashford/page-analyzer",
-        "description": "GitHub repository URL"
-      }
+      "repository": "https://github.com/damionrashford/page-analyzer"
     },
     "cdn": {
-      "html2canvas": {
-        "url": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js",
-        "description": "CDN URL for html2canvas library used for screenshots"
-      }
-    }
-  },
-  "placeholders": {
-    "GIST_ID": {
-      "description": "Placeholder that gets replaced with actual Gist ID during deployment",
-      "usedIn": [
-        "vite.config.js",
-        "src/host/host.js",
-        "install.html",
-        "README.md",
-        ".github/workflows/deploy.yml"
-      ]
-    }
-  },
-  "files": {
-    "hostJs": {
-      "source": "src/host/host.js",
-      "built": "dist/host.min.js",
-      "description": "Host environment script that creates iframe and sets up Remote DOM receiver"
-    },
-    "remoteJs": {
-      "source": "src/remote/remote.js",
-      "built": "dist/remote.min.js",
-      "description": "Remote environment script that runs in the iframe"
-    },
-    "remoteHtml": {
-      "source": "src/remote/remote.html",
-      "built": "dist/remote.html",
-      "description": "HTML file loaded in the iframe"
-    },
-    "bookmarklet": {
-      "generated": "dist/bookmarklet.js",
-      "description": "Generated bookmarklet code that users save as a bookmark"
-    },
-    "installHtml": {
-      "source": "install.html",
-      "deployed": "gh-pages/install.html",
-      "description": "Installation page with draggable bookmarklet button"
+      "html2canvas": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
     }
   }
 }
-
