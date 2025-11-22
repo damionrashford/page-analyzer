@@ -85,7 +85,7 @@ Page Analyzer is a bookmarklet that adds a professional developer tools overlay 
 
 ### Step 1: Get the Bookmarklet Code
 
-1. Open the `bookmarklet.js` file in this repository
+1. Open the `bookmarklet.js` file above
 2. Copy the entire contents (the code that starts with `javascript:`)
 
 ### Step 2: Create the Bookmark
