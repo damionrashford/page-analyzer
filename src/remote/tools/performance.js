@@ -61,20 +61,46 @@ export function initPerformanceAnalyzer(panel) {
 }
 
 function calculatePerformanceMetrics() {
-  const timing = performance.timing;
-  const navigation = performance.navigation;
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  
+  if (!navEntry) {
+    return {
+      dns: 0,
+      tcp: 0,
+      ssl: 0,
+      ttfb: 0,
+      download: 0,
+      domProcessing: 0,
+      domContentLoaded: 0,
+      loadComplete: 0,
+      redirects: 0,
+      cacheHit: 'No',
+      memory: null
+    };
+  }
+
+  const dns = navEntry.domainLookupEnd - navEntry.domainLookupStart;
+  const tcp = navEntry.connectEnd - navEntry.connectStart;
+  const ssl = navEntry.secureConnectionStart > 0 ? navEntry.connectEnd - navEntry.secureConnectionStart : 0;
+  const ttfb = navEntry.responseStart - navEntry.requestStart;
+  const download = navEntry.responseEnd - navEntry.responseStart;
+  const domProcessing = navEntry.domComplete - navEntry.domLoading;
+  const domContentLoaded = navEntry.domContentLoadedEventEnd - navEntry.fetchStart;
+  const loadComplete = navEntry.loadEventEnd - navEntry.fetchStart;
+  const redirects = navEntry.redirectEnd - navEntry.redirectStart;
+  const cacheHit = navEntry.type === 2 ? 'Yes' : 'No';
 
   return {
-    dns: timing.domainLookupEnd - timing.domainLookupStart,
-    tcp: timing.connectEnd - timing.connectStart,
-    ssl: timing.secureConnectionStart > 0 ? timing.connectEnd - timing.secureConnectionStart : 0,
-    ttfb: timing.responseStart - timing.requestStart,
-    download: timing.responseEnd - timing.responseStart,
-    domProcessing: timing.domComplete - timing.domLoading,
-    domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-    loadComplete: timing.loadEventEnd - timing.navigationStart,
-    redirects: timing.redirectEnd - timing.redirectStart,
-    cacheHit: navigation.type === navigation.TYPE_BACK_FORWARD ? 'Yes' : 'No',
+    dns,
+    tcp,
+    ssl,
+    ttfb,
+    download,
+    domProcessing,
+    domContentLoaded,
+    loadComplete,
+    redirects,
+    cacheHit,
     memory: performance.memory ? {
       used: performance.memory.usedJSHeapSize,
       total: performance.memory.totalJSHeapSize,

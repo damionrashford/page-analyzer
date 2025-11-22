@@ -1,0 +1,129 @@
+name: Build and Deploy to Gist
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Create or Update Gist
+        id: gist
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GIST_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const core = require('@actions/core');
+            
+            const distDir = path.join(process.cwd(), 'dist');
+            const hostJs = fs.readFileSync(path.join(distDir, 'host.min.js'), 'utf-8');
+            const remoteJs = fs.readFileSync(path.join(distDir, 'remote.min.js'), 'utf-8');
+            const remoteHtml = fs.readFileSync(path.join(distDir, 'remote.html'), 'utf-8');
+            
+            const gistId = process.env.GIST_ID || '';
+            
+            const files = {
+              'host.min.js': { content: hostJs },
+              'remote.min.js': { content: remoteJs },
+              'remote.html': { content: remoteHtml }
+            };
+            
+            let gist;
+            
+            if (gistId && gistId !== '') {
+              try {
+                const existingGist = await github.rest.gists.get({ gist_id: gistId });
+                gist = await github.rest.gists.update({
+                  gist_id: gistId,
+                  files: files
+                });
+                console.log('✓ Updated existing Gist');
+              } catch (error) {
+                console.log('Gist not found, creating new one...');
+                gist = await github.rest.gists.create({
+                  description: 'Page Analyzer - Built files',
+                  public: true,
+                  files: files
+                });
+                console.log('✓ Created new Gist');
+              }
+            } else {
+              gist = await github.rest.gists.create({
+                description: 'Page Analyzer - Built files',
+                public: true,
+                files: files
+              });
+              console.log('✓ Created new Gist');
+            }
+            
+            const gistUrl = gist.data.html_url;
+            const gistIdOutput = gist.data.id;
+            const hostRawUrl = gist.data.files['host.min.js'].raw_url;
+            const remoteHtmlRawUrl = gist.data.files['remote.html'].raw_url;
+            
+            console.log(`Gist URL: ${gistUrl}`);
+            console.log(`Gist ID: ${gistIdOutput}`);
+            console.log(`Host JS URL: ${hostRawUrl}`);
+            console.log(`Remote HTML URL: ${remoteHtmlRawUrl}`);
+            
+            core.setOutput('gist_id', gistIdOutput);
+            core.setOutput('gist_url', gistUrl);
+            core.setOutput('host_url', hostRawUrl);
+            core.setOutput('remote_html_url', remoteHtmlRawUrl)
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+
+      - name: Update files with Gist URLs
+        run: |
+          cd dist
+          HOST_URL="${{ steps.gist.outputs.host_url }}"
+          REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
+          
+          BOOKMARKLET='javascript:(function(){var s=document.createElement("script");s.src="'$HOST_URL'";s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById("page-analyzer-script")){s.id="page-analyzer-script";document.head.appendChild(s);}else{console.warn("Page Analyzer already loaded");}})();'
+          
+          echo "$BOOKMARKLET" > bookmarklet.js
+          
+          echo "✓ Updated bookmarklet.js with Gist URLs"
+          echo "Gist ID: ${{ steps.gist.outputs.gist_id }}"
+          echo "Bookmarklet ready to use!"
+
+      - name: Create Release Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-files
+          path: dist/
+          retention-days: 30
+
+      - name: Update host.js with Gist URL
+        run: |
+          REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
+          sed -i.bak "s|https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/remote.html|$REMOTE_HTML_URL|g" src/host/host.js
+          rm src/host/host.js.bak
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/host/host.js
+          git commit -m "Update host.js with Gist URL from deployment" || echo "No changes to commit"
+          git push || echo "Nothing to push"

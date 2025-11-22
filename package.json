@@ -4,14 +4,16 @@
   "description": "Advanced web page analyzer bookmarklet with Remote DOM",
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "dev": "node build.js --watch"
+    "build": "npm run build:host && npm run build:remote",
+    "build:host": "BUILD_TARGET=host vite build",
+    "build:remote": "BUILD_TARGET=remote vite build",
+    "dev": "vite build --watch"
   },
   "dependencies": {
     "@remote-dom/core": "^1.5.1"
   },
   "devDependencies": {
-    "esbuild": "^0.19.0"
+    "terser": "^5.44.1",
+    "vite": "^5.4.21"
   }
 }
-

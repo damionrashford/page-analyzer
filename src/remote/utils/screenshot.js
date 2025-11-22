@@ -48,7 +48,6 @@ async function captureFullPageScreenshot() {
 }
 
 function fallbackScreenshot(element, canvas, ctx) {
-  const rect = element.getBoundingClientRect();
   const style = window.getComputedStyle(element);
   
   ctx.fillStyle = style.backgroundColor || '#ffffff';

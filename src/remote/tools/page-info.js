@@ -24,6 +24,13 @@ function createBasicInfoSection() {
   const grid = document.createElement('div');
   grid.style.cssText = 'display: grid; gap: 12px;';
 
+  const getPlatform = () => {
+    if (navigator.userAgentData?.platform) {
+      return navigator.userAgentData.platform;
+    }
+    return 'Unknown';
+  };
+
   const info = [
     { label: 'URL', value: window.location.href },
     { label: 'Title', value: document.title },
@@ -32,7 +39,7 @@ function createBasicInfoSection() {
     { label: 'Path', value: window.location.pathname },
     { label: 'User Agent', value: navigator.userAgent },
     { label: 'Language', value: navigator.language },
-    { label: 'Platform', value: navigator.platform },
+    { label: 'Platform', value: getPlatform() },
     { label: 'Cookies Enabled', value: navigator.cookieEnabled ? 'Yes' : 'No' },
     { label: 'Online Status', value: navigator.onLine ? 'Online' : 'Offline' },
     { label: 'Secure Context', value: window.isSecureContext ? 'Yes' : 'No' }
