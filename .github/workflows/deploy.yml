@@ -36,7 +36,6 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
-            const core = require('@actions/core');
             
             const distDir = path.join(process.cwd(), 'dist');
             const hostJs = fs.readFileSync(path.join(distDir, 'host.min.js'), 'utf-8');
