@@ -112,42 +112,6 @@ Open Installation Page</a>
 > **Note:** Click the button above to open the installation page in your browser
 > with a draggable bookmarklet button and detailed instructions.
 
-### Manual Installation (Alternative Method)
-
-If you prefer to install manually:
-
-**Step 1: Get the Bookmarklet Code**
-
-1. Open the
-   [installation page](https://damionrashford.github.io/page-analyzer/install.html)
-2. Right-click on the bookmarklet button and select "Copy link address"
-3. This copies the bookmarklet code to your clipboard
-
-**Step 2: Create the Bookmark**
-
-**Chrome/Edge:**
-
-1. Right-click your bookmarks bar
-2. Select "Add page" or "Add bookmark"
-3. Name it "Page Analyzer"
-4. Paste the bookmarklet code into the URL field
-5. Click "Save"
-
-**Firefox:**
-
-1. Right-click your bookmarks toolbar
-2. Select "New Bookmark"
-3. Name it "Page Analyzer"
-4. Paste the bookmarklet code into the "Location" field
-5. Click "Save"
-
-**Safari:**
-
-1. Right-click your bookmarks bar
-2. Select "Add Bookmark"
-3. Name it "Page Analyzer"
-4. Edit the bookmark and paste the code into the URL field
-
 ## Usage
 
 ### Opening Page Analyzer
