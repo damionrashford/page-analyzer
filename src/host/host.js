@@ -28,7 +28,7 @@ class PageAnalyzer {
     const iframe = document.createElement('iframe');
     iframe.id = 'page-analyzer-iframe';
     iframe.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:2147483647;pointer-events:none;';
-    iframe.src = 'https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/remote.html';
+    iframe.src = 'https://gist.githubusercontent.com/damionrashford/2f566eaab0c1abca6284440d6f6599f8/raw/3b913f47bd736690757e92480c22154ae622482e/remote.html';
     document.body.appendChild(iframe);
     this.iframe = iframe;
   }
