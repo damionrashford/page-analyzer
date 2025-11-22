@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Analyzer - Install</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+    
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+    .bookmarklet-button {
+      display: inline-block;
+      padding: 16px 32px;
+      background-color: #0066cc;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      border: 2px solid #0052a3;
+      cursor: move;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      transition: all 0.2s;
+      margin: 20px 0;
+    }
+    
+    .bookmarklet-button:hover {
+      background-color: #0052a3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+    }
+    
+    .bookmarklet-button:active {
+      transform: translateY(0);
+    }
+    
+    .instructions {
+      background: #f8f9fa;
+      border-left: 4px solid #0066cc;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    
+    .instructions h3 {
+      color: #333;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    
+    .instructions ol {
+      margin-left: 20px;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    .instructions li {
+      margin-bottom: 8px;
+    }
+    
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 16px;
+      border-radius: 6px;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 12px;
+      overflow-x: auto;
+      margin: 15px 0;
+      word-break: break-all;
+    }
+    
+    .footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Page Analyzer</h1>
+    <p class="subtitle">Install the bookmarklet to analyze any webpage</p>
+    
+    <div style="text-align: center;">
+      <a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();" 
+         class="bookmarklet-button" 
+         draggable="true">📌 Drag to Bookmarks Bar</a>
+    </div>
+    
+    <div class="instructions">
+      <h3>Installation Instructions</h3>
+      <ol>
+        <li>Make sure your bookmarks bar is visible (<kbd>Ctrl+Shift+B</kbd> on Windows/Linux or <kbd>Cmd+Shift+B</kbd> on Mac)</li>
+        <li>Drag the button above to your bookmarks bar</li>
+        <li>Done! Click it on any webpage to analyze it</li>
+      </ol>
+    </div>
+    
+    <div class="instructions">
+      <h3>Manual Installation</h3>
+      <p style="color: #555; margin-bottom: 10px;">If drag-and-drop doesn't work, right-click the button above and select "Copy link address", then:</p>
+      <ol>
+        <li>Right-click your bookmarks bar</li>
+        <li>Select "Add page" or "Add bookmark"</li>
+        <li>Name it "Page Analyzer"</li>
+        <li>Paste the copied code into the URL field</li>
+        <li>Click "Save"</li>
+      </ol>
+    </div>
+    
+    <div class="footer">
+      <p>For more information, visit the <a href="https://github.com/damionrashford/page-analyzer" target="_blank">GitHub repository</a></p>
+    </div>
+  </div>
+</body>
+</html>
+

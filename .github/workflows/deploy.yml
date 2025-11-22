@@ -116,7 +116,7 @@ jobs:
           path: dist/
           retention-days: 30
 
-      - name: Update host.js and README with Gist URLs
+      - name: Update host.js, README, and install.html with Gist URLs
         run: |
           REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
           HOST_URL="${{ steps.gist.outputs.host_url }}"
@@ -130,8 +130,11 @@ jobs:
           sed -i.bak "s|https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js|$HOST_URL|g" README.md
           rm README.md.bak
           
+          sed -i.bak "s|https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js|$HOST_URL|g" install.html
+          rm install.html.bak
+          
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/host/host.js README.md
-          git commit -m "Update host.js and README with Gist URLs from deployment" || echo "No changes to commit"
+          git add src/host/host.js README.md install.html
+          git commit -m "Update host.js, README, and install.html with Gist URLs from deployment" || echo "No changes to commit"
           git push || echo "Nothing to push"

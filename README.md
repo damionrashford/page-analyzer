@@ -98,33 +98,29 @@ analysis tools in a draggable, resizable panel.
 
 ## Installation
 
-### Quick Install (Drag & Drop)
+### Quick Install
 
-**Simply drag the button below to your bookmarks bar:**
+**Open the installation page to get started:**
 
 <div align="center" style="margin: 20px 0; padding: 20px;">
 
-<a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/b80aa7bc89fa29b6bf476623e159c6a9/raw/fb369170bde6175055b195712b83d7f2d3ed7235/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();" style="display: inline-block; padding: 12px 24px; background-color: #0066cc; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #0052a3; cursor: move; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📌
-Drag to Bookmarks Bar</a>
+<a href="install.html" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
+Open Installation Page</a>
 
 </div>
 
-**Instructions:**
-
-<ol>
-<li>Make sure your bookmarks bar is visible (<kbd>Ctrl+Shift+B</kbd> / <kbd>Cmd+Shift+B</kbd>)</li>
-<li>Drag the button above to your bookmarks bar</li>
-<li>Done! Click it on any webpage to analyze it</li>
-</ol>
+> **Note:** Open `install.html` in your browser to see a dedicated installation
+> page with a draggable bookmarklet button and detailed instructions.
 
 ### Manual Installation (Alternative Method)
 
-If drag-and-drop doesn't work, you can manually create the bookmark:
+If you prefer to install manually:
 
 **Step 1: Get the Bookmarklet Code**
 
 <ol>
-<li>Right-click on the button above and select "Copy link address" (or "Copy link")</li>
+<li>Open the <a href="install.html">installation page</a></li>
+<li>Right-click on the bookmarklet button and select "Copy link address"</li>
 <li>This copies the bookmarklet code to your clipboard</li>
 </ol>
 
@@ -158,6 +154,20 @@ If drag-and-drop doesn't work, you can manually create the bookmark:
 <li>Name it "Page Analyzer"</li>
 <li>Edit the bookmark and paste the code into the URL field</li>
 </ol>
+
+## Local Installation Page
+
+For the best installation experience, open the local installation page:
+
+<div align="center" style="margin: 20px 0; padding: 20px;">
+
+<a href="install.html" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
+Open Installation Page</a>
+
+</div>
+
+> **Note:** Open `install.html` in your browser to see a dedicated installation
+> page with a draggable bookmarklet button and detailed instructions.
 
 ## Usage
 
