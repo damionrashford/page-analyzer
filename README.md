@@ -104,7 +104,7 @@ analysis tools in a draggable, resizable panel.
 
 <div align="center">
 
-### [📌 Drag to Bookmarks Bar](javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();)
+### [📌 Drag to Bookmarks Bar](javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/6fc6c613bdc6add6c94e36de4a09d0a5/raw/fb369170bde6175055b195712b83d7f2d3ed7235/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();)
 
 </div>
 
