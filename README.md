@@ -104,8 +104,7 @@ analysis tools in a draggable, resizable panel.
 
 <div align="center" style="margin: 20px 0; padding: 20px;">
 
-<a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();" style="display: inline-block; padding: 12px 24px; background-color: #0066cc; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #0052a3; cursor: move; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📌
-Drag to Bookmarks Bar</a>
+<a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/024211a31434d14af7ccf13adbd11f6b/raw/fb369170bde6175055b195712b83d7f2d3ed7235/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();" style="display: inline-block; padding: 12px 24px; background-color: #0066cc; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #0052a3; cursor: move; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📌 Drag to Bookmarks Bar</a>
 
 </div>
 
