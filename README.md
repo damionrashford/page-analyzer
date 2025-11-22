@@ -1,132 +1,256 @@
-# Page Analyzer
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #24292e;
+  max-width: 1012px;
+  margin: 0 auto;
+  padding: 32px;
+}
+h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+h3 {
+  font-size: 1.25em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+p {
+  margin-bottom: 16px;
+}
+ul, ol {
+  margin-bottom: 16px;
+  padding-left: 2em;
+}
+li {
+  margin-bottom: 8px;
+}
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+code {
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding: 0 1em;
+  color: #6a737d;
+  margin-bottom: 16px;
+}
+dt {
+  font-weight: 600;
+  margin-top: 16px;
+}
+dd {
+  margin-left: 0;
+  margin-bottom: 16px;
+}
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+}
+.bookmarklet-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #218838;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.bookmarklet-button:hover {
+  background-color: #218838;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
 
-A powerful browser bookmarklet that provides comprehensive web page analysis and
-developer tools directly in your browser. Analyze any webpage's DOM structure,
-network activity, performance metrics, accessibility, SEO, and security - all
-without leaving the page.
+<h1>Page Analyzer</h1>
 
-## What is Page Analyzer?
+<p>A powerful browser bookmarklet that provides comprehensive web page analysis and developer tools directly in your browser. Analyze any webpage's DOM structure, network activity, performance metrics, accessibility, SEO, and security - all without leaving the page.</p>
 
-Page Analyzer is a bookmarklet that adds a professional developer tools overlay
-to any webpage. Simply click the bookmarklet and instantly access 9 powerful
-analysis tools in a draggable, resizable panel.
+<h2>What is Page Analyzer?</h2>
 
-## Features
+<p>Page Analyzer is a bookmarklet that adds a professional developer tools overlay to any webpage. Simply click the bookmarklet and instantly access 9 powerful analysis tools in a draggable, resizable panel.</p>
 
-### 🔍 DOM Inspector
+<h2>Features</h2>
 
-- Visual element selection by hovering over the page
-- Interactive DOM tree viewer
-- Element properties panel with computed styles
-- Screenshot individual elements
-- Real-time element highlighting
+<h3>🔍 DOM Inspector</h3>
 
-### 🌐 Network Monitor
+<ul>
+<li>Visual element selection by hovering over the page</li>
+<li>Interactive DOM tree viewer</li>
+<li>Element properties panel with computed styles</li>
+<li>Screenshot individual elements</li>
+<li>Real-time element highlighting</li>
+</ul>
 
-- Intercepts and logs all network requests (fetch and XHR)
-- View request/response details, timing, and size
-- Filter by request type
-- Export network data as HAR file
-- Click any request to see full details
+<h3>🌐 Network Monitor</h3>
 
-### ⚡ Performance Analyzer
+<ul>
+<li>Intercepts and logs all network requests (fetch and XHR)</li>
+<li>View request/response details, timing, and size</li>
+<li>Filter by request type</li>
+<li>Export network data as HAR file</li>
+<li>Click any request to see full details</li>
+</ul>
 
-- Page load metrics (DNS, TCP, SSL, TTFB, download time)
-- Resource timing for all loaded assets
-- Paint timing (First Paint, First Contentful Paint)
-- Memory usage (when available)
-- Export performance data as JSON
+<h3>⚡ Performance Analyzer</h3>
 
-### 💬 Console Capture
+<ul>
+<li>Page load metrics (DNS, TCP, SSL, TTFB, download time)</li>
+<li>Resource timing for all loaded assets</li>
+<li>Paint timing (First Paint, First Contentful Paint)</li>
+<li>Memory usage (when available)</li>
+<li>Export performance data as JSON</li>
+</ul>
 
-- Captures all console logs, errors, warnings, and info messages
-- Filter logs by level (log, error, warn, info, debug)
-- View timestamps and stack traces
-- Export console logs as JSON
-- Real-time log streaming
+<h3>💬 Console Capture</h3>
 
-### 💾 Storage Inspector
+<ul>
+<li>Captures all console logs, errors, warnings, and info messages</li>
+<li>Filter logs by level (log, error, warn, info, debug)</li>
+<li>View timestamps and stack traces</li>
+<li>Export console logs as JSON</li>
+<li>Real-time log streaming</li>
+</ul>
 
-- View and edit localStorage items
-- View and edit sessionStorage items
-- View and manage cookies
-- Edit storage values directly
-- Delete individual items
+<h3>💾 Storage Inspector</h3>
 
-### ℹ️ Page Information
+<ul>
+<li>View and edit localStorage items</li>
+<li>View and edit sessionStorage items</li>
+<li>View and manage cookies</li>
+<li>Edit storage values directly</li>
+<li>Delete individual items</li>
+</ul>
 
-- Complete page metadata (URL, title, protocol, host)
-- All meta tags with content
-- Viewport dimensions and device information
-- Security context information
-- User agent and browser details
+<h3>ℹ️ Page Information</h3>
 
-### ♿ Accessibility Audit
+<ul>
+<li>Complete page metadata (URL, title, protocol, host)</li>
+<li>All meta tags with content</li>
+<li>Viewport dimensions and device information</li>
+<li>Security context information</li>
+<li>User agent and browser details</li>
+</ul>
 
-- Accessibility score (0-100)
-- Detects missing alt text on images
-- Checks heading structure (H1-H6)
-- Validates form labels and ARIA attributes
-- Color contrast analysis
-- Export accessibility report as JSON
+<h3>♿ Accessibility Audit</h3>
 
-### 🔎 SEO Analyzer
+<ul>
+<li>Accessibility score (0-100)</li>
+<li>Detects missing alt text on images</li>
+<li>Checks heading structure (H1-H6)</li>
+<li>Validates form labels and ARIA attributes</li>
+<li>Color contrast analysis</li>
+<li>Export accessibility report as JSON</li>
+</ul>
 
-- SEO score with detailed analysis
-- Meta tags validation (title, description, Open Graph)
-- Heading structure analysis
-- Image alt text checking
-- Link analysis (internal/external)
-- Structured data (JSON-LD) detection
-- Export SEO report as JSON
+<h3>🔎 SEO Analyzer</h3>
 
-### 🔒 Security Checker
+<ul>
+<li>SEO score with detailed analysis</li>
+<li>Meta tags validation (title, description, Open Graph)</li>
+<li>Heading structure analysis</li>
+<li>Image alt text checking</li>
+<li>Link analysis (internal/external)</li>
+<li>Structured data (JSON-LD) detection</li>
+<li>Export SEO report as JSON</li>
+</ul>
 
-- Security score assessment
-- HTTPS and secure context detection
-- Mixed content detection
-- Security headers information
-- Security recommendations
-- Export security report as JSON
+<h3>🔒 Security Checker</h3>
 
-### 📸 Screenshot
+<ul>
+<li>Security score assessment</li>
+<li>HTTPS and secure context detection</li>
+<li>Mixed content detection</li>
+<li>Security headers information</li>
+<li>Security recommendations</li>
+<li>Export security report as JSON</li>
+</ul>
 
-- Capture full page screenshots
-- Capture individual element screenshots
-- Automatic download as PNG
-- Available via command palette
+<h3>📸 Screenshot</h3>
 
-## Installation
+<ul>
+<li>Capture full page screenshots</li>
+<li>Capture individual element screenshots</li>
+<li>Automatic download as PNG</li>
+<li>Available via command palette</li>
+</ul>
 
-### Quick Install
+<h2>Installation</h2>
 
-**Open the installation page to get started:**
+<h3>Quick Install</h3>
 
-<div align="center" style="margin: 20px 0; padding: 20px;">
+<p><strong>Open the installation page to get started:</strong></p>
 
-<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
-Open Installation Page</a>
-
+<div class="button-container">
+<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" class="bookmarklet-button">🚀 Open Installation Page</a>
 </div>
 
-> **Note:** Click the button above to open the installation page in your browser
-> with a draggable bookmarklet button and detailed instructions.
+<blockquote>
+<p><strong>Note:</strong> Click the button above to open the installation page in your browser with a draggable bookmarklet button and detailed instructions.</p>
+</blockquote>
 
-### Manual Installation (Alternative Method)
+<h3>Manual Installation (Alternative Method)</h3>
 
-If you prefer to install manually:
+<p>If you prefer to install manually:</p>
 
-**Step 1: Get the Bookmarklet Code**
+<p><strong>Step 1: Get the Bookmarklet Code</strong></p>
 
 <ol>
-<li>Open the <a href="install.html">installation page</a></li>
+<li>Open the <a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank">installation page</a></li>
 <li>Right-click on the bookmarklet button and select "Copy link address"</li>
 <li>This copies the bookmarklet code to your clipboard</li>
 </ol>
 
-**Step 2: Create the Bookmark**
+<p><strong>Step 2: Create the Bookmark</strong></p>
 
-**Chrome/Edge:**
+<p><strong>Chrome/Edge:</strong></p>
 
 <ol>
 <li>Right-click your bookmarks bar</li>
@@ -136,7 +260,7 @@ If you prefer to install manually:
 <li>Click "Save"</li>
 </ol>
 
-**Firefox:**
+<p><strong>Firefox:</strong></p>
 
 <ol>
 <li>Right-click your bookmarks toolbar</li>
@@ -146,7 +270,7 @@ If you prefer to install manually:
 <li>Click "Save"</li>
 </ol>
 
-**Safari:**
+<p><strong>Safari:</strong></p>
 
 <ol>
 <li>Right-click your bookmarks bar</li>
@@ -155,23 +279,9 @@ If you prefer to install manually:
 <li>Edit the bookmark and paste the code into the URL field</li>
 </ol>
 
-## Local Installation Page
+<h2>Usage</h2>
 
-For the best installation experience, open the local installation page:
-
-<div align="center" style="margin: 20px 0; padding: 20px;">
-
-<a href="install.html" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
-Open Installation Page</a>
-
-</div>
-
-> **Note:** Open `install.html` in your browser to see a dedicated installation
-> page with a draggable bookmarklet button and detailed instructions.
-
-## Usage
-
-### Opening Page Analyzer
+<h3>Opening Page Analyzer</h3>
 
 <ol>
 <li>Navigate to any webpage you want to analyze</li>
@@ -179,7 +289,7 @@ Open Installation Page</a>
 <li>The analyzer panel will appear in the bottom-right corner</li>
 </ol>
 
-### Using the Panel
+<h3>Using the Panel</h3>
 
 <ul>
 <li><strong>Drag</strong>: Click and drag the header to move the panel</li>
@@ -189,9 +299,9 @@ Open Installation Page</a>
 <li><strong>Close</strong>: Click the close button (×) to hide the panel</li>
 </ul>
 
-### Navigating Tabs
+<h3>Navigating Tabs</h3>
 
-Click any tab at the top to switch between tools:
+<p>Click any tab at the top to switch between tools:</p>
 
 <ul>
 <li>🔍 <strong>DOM</strong> - Inspect page elements</li>
@@ -205,22 +315,22 @@ Click any tab at the top to switch between tools:
 <li>🔒 <strong>Security</strong> - Security check</li>
 </ul>
 
-### Keyboard Shortcuts
+<h3>Keyboard Shortcuts</h3>
 
 <ul>
-<li><strong><kbd>Cmd/Ctrl + K</kbd></strong> - Open command palette (quick access to all features)</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + D</kbd></strong> - Switch to DOM Inspector</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + N</kbd></strong> - Switch to Network Monitor</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + P</kbd></strong> - Switch to Performance</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + C</kbd></strong> - Switch to Console</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + S</kbd></strong> - Switch to Storage</li>
-<li><strong><kbd>Cmd/Ctrl + Shift + T</kbd></strong> - Toggle dark/light theme</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd></strong> - Open command palette (quick access to all features)</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></strong> - Switch to DOM Inspector</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></strong> - Switch to Network Monitor</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></strong> - Switch to Performance</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></strong> - Switch to Console</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></strong> - Switch to Storage</li>
+<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></strong> - Toggle dark/light theme</li>
 <li><strong><kbd>Escape</kbd></strong> - Close command palette or close panel</li>
 </ul>
 
-### Command Palette
+<h3>Command Palette</h3>
 
-Press <kbd>Cmd/Ctrl + K</kbd> to open the command palette. Type to search for:
+<p>Press <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> to open the command palette. Type to search for:</p>
 
 <ul>
 <li>Open any tool tab</li>
@@ -230,11 +340,11 @@ Press <kbd>Cmd/Ctrl + K</kbd> to open the command palette. Type to search for:
 <li>And more...</li>
 </ul>
 
-Use arrow keys to navigate, Enter to select, Escape to close.
+<p>Use arrow keys to navigate, Enter to select, Escape to close.</p>
 
-### Exporting Data
+<h3>Exporting Data</h3>
 
-Most tools include export functionality:
+<p>Most tools include export functionality:</p>
 
 <ul>
 <li><strong>Network</strong>: Export as HAR file</li>
@@ -245,28 +355,27 @@ Most tools include export functionality:
 <li><strong>Security</strong>: Export report as JSON</li>
 </ul>
 
-Click the "Export" button in any tool to download the data.
+<p>Click the "Export" button in any tool to download the data.</p>
 
-### Taking Screenshots
+<h3>Taking Screenshots</h3>
 
 <ul>
-<li><strong>Full Page</strong>: Use command palette (<kbd>Cmd/Ctrl + K</kbd>) → "Take Screenshot"</li>
+<li><strong>Full Page</strong>: Use command palette (<kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd>) → "Take Screenshot"</li>
 <li><strong>Element Screenshot</strong>: In DOM Inspector, select an element, then click "Screenshot Element" button</li>
 </ul>
 
-### Theme
+<h3>Theme</h3>
 
-The analyzer automatically detects your system theme preference. You can
-manually toggle between dark and light themes:
+<p>The analyzer automatically detects your system theme preference. You can manually toggle between dark and light themes:</p>
 
 <ul>
-<li>Use keyboard shortcut: <kbd>Cmd/Ctrl + Shift + T</kbd></li>
-<li>Or use command palette: <kbd>Cmd/Ctrl + K</kbd> → "Toggle Theme"</li>
+<li>Use keyboard shortcut: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></li>
+<li>Or use command palette: <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> → "Toggle Theme"</li>
 </ul>
 
-Your theme preference is saved and will persist across sessions.
+<p>Your theme preference is saved and will persist across sessions.</p>
 
-## Tips
+<h2>Tips</h2>
 
 <ol>
 <li><strong>DOM Inspector</strong>: Hover over elements on the page to see them highlighted. Click to select and view properties.</li>
@@ -277,9 +386,9 @@ Your theme preference is saved and will persist across sessions.
 <li><strong>Accessibility/SEO/Security</strong>: Click "Export" to save detailed reports for documentation or sharing.</li>
 </ol>
 
-## Browser Compatibility
+<h2>Browser Compatibility</h2>
 
-Page Analyzer works in all modern browsers:
+<p>Page Analyzer works in all modern browsers:</p>
 
 <ul>
 <li>Chrome/Edge (Chromium) - Full support</li>
@@ -287,12 +396,11 @@ Page Analyzer works in all modern browsers:
 <li>Safari - Full support</li>
 </ul>
 
-## Privacy
+<h2>Privacy</h2>
 
-Page Analyzer runs entirely in your browser. No data is sent to any external
-servers. All analysis happens locally on your device.
+<p>Page Analyzer runs entirely in your browser. No data is sent to any external servers. All analysis happens locally on your device.</p>
 
-## Troubleshooting
+<h2>Troubleshooting</h2>
 
 <dl>
 <dt><strong>Panel doesn't appear:</strong></dt>
@@ -324,16 +432,18 @@ servers. All analysis happens locally on your device.
 <dd>
 <ul>
 <li>Clear browser cache and localStorage</li>
-<li>Try manually toggling with <kbd>Cmd/Ctrl + Shift + T</kbd></li>
+<li>Try manually toggling with <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></li>
 </ul>
 </dd>
 </dl>
 
-## Support
+<h2>Support</h2>
 
-For issues, feature requests, or contributions, please visit the
-<a href="https://github.com/damionrashford/page-analyzer">GitHub repository</a>.
+<p>For issues, feature requests, or contributions, please visit the <a href="https://github.com/damionrashford/page-analyzer">GitHub repository</a>.</p>
 
-## License
+<h2>License</h2>
 
-MIT License - See LICENSE file for details.
+<p>MIT License - See LICENSE file for details.</p>
+
+</body>
+</html>
