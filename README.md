@@ -100,14 +100,12 @@ analysis tools in a draggable, resizable panel.
 
 ### Quick Install (Drag & Drop)
 
-**Simply drag the button below to your bookmarks bar:**
+**Simply drag the link below to your bookmarks bar:**
 
 <div align="center">
-  <a href="javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();"
-     style="display: inline-block; padding: 12px 24px; background: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: move;"
-     draggable="true"
-     onmouseover="this.style.background='#0052a3'"
-     onmouseout="this.style.background='#0066cc'">📌 Drag to Bookmarks Bar</a>
+
+### [📌 Drag to Bookmarks Bar](javascript:(function(){var s=document.createElement('script');s.src='https://gist.githubusercontent.com/damionrashford/GIST_ID/raw/host.min.js';s.onload=function(){if(window.PageAnalyzer){window.PageAnalyzer.init();}};if(!document.getElementById('page-analyzer-script')){s.id='page-analyzer-script';document.head.appendChild(s);}else{console.warn('Page Analyzer already loaded');}})();)
+
 </div>
 
 **Instructions:**
