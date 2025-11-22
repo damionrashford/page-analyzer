@@ -104,7 +104,7 @@ analysis tools in a draggable, resizable panel.
 
 <div align="center" style="margin: 20px 0; padding: 20px;">
 
-<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
+<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
 Open Installation Page</a>
 
 </div>
