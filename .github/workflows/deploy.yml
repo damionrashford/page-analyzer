@@ -116,6 +116,15 @@ jobs:
           path: dist/
           retention-days: 30
 
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          include_path: install.html
+
       - name: Update host.js, README, and install.html with Gist URLs
         run: |
           REMOTE_HTML_URL="${{ steps.gist.outputs.remote_html_url }}"
