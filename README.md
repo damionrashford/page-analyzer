@@ -1,406 +1,271 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #24292e;
-  max-width: 1012px;
-  margin: 0 auto;
-  padding: 32px;
-}
-h1 {
-  font-size: 2em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-h2 {
-  font-size: 1.5em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
-  margin-top: 24px;
-  margin-bottom: 16px;
-}
-h3 {
-  font-size: 1.25em;
-  margin-top: 24px;
-  margin-bottom: 16px;
-}
-p {
-  margin-bottom: 16px;
-}
-ul, ol {
-  margin-bottom: 16px;
-  padding-left: 2em;
-}
-li {
-  margin-bottom: 8px;
-}
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-code {
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
-  font-size: 85%;
-  margin: 0;
-  padding: 0.2em 0.4em;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-kbd {
-  background-color: #fafbfc;
-  border: 1px solid #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-  color: #444d56;
-  display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  line-height: 10px;
-  padding: 3px 5px;
-  vertical-align: middle;
-}
-blockquote {
-  border-left: 4px solid #dfe2e5;
-  padding: 0 1em;
-  color: #6a737d;
-  margin-bottom: 16px;
-}
-dt {
-  font-weight: 600;
-  margin-top: 16px;
-}
-dd {
-  margin-left: 0;
-  margin-bottom: 16px;
-}
-.button-container {
-  text-align: center;
-  margin: 20px 0;
-  padding: 20px;
-}
-.bookmarklet-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #28a745;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 16px;
-  border: 1px solid #218838;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.bookmarklet-button:hover {
-  background-color: #218838;
-  text-decoration: none;
-}
-</style>
-</head>
-<body>
+# Page Analyzer
 
-<h1>Page Analyzer</h1>
+A powerful browser bookmarklet that provides comprehensive web page analysis and
+developer tools directly in your browser. Analyze any webpage's DOM structure,
+network activity, performance metrics, accessibility, SEO, and security - all
+without leaving the page.
 
-<p>A powerful browser bookmarklet that provides comprehensive web page analysis and developer tools directly in your browser. Analyze any webpage's DOM structure, network activity, performance metrics, accessibility, SEO, and security - all without leaving the page.</p>
+## What is Page Analyzer?
 
-<h2>What is Page Analyzer?</h2>
+Page Analyzer is a bookmarklet that adds a professional developer tools overlay
+to any webpage. Simply click the bookmarklet and instantly access 9 powerful
+analysis tools in a draggable, resizable panel.
 
-<p>Page Analyzer is a bookmarklet that adds a professional developer tools overlay to any webpage. Simply click the bookmarklet and instantly access 9 powerful analysis tools in a draggable, resizable panel.</p>
+## Features
 
-<h2>Features</h2>
+### 🔍 DOM Inspector
 
-<h3>🔍 DOM Inspector</h3>
+- Visual element selection by hovering over the page
+- Interactive DOM tree viewer
+- Element properties panel with computed styles
+- Screenshot individual elements
+- Real-time element highlighting
 
-<ul>
-<li>Visual element selection by hovering over the page</li>
-<li>Interactive DOM tree viewer</li>
-<li>Element properties panel with computed styles</li>
-<li>Screenshot individual elements</li>
-<li>Real-time element highlighting</li>
-</ul>
+### 🌐 Network Monitor
 
-<h3>🌐 Network Monitor</h3>
+- Intercepts and logs all network requests (fetch and XHR)
+- View request/response details, timing, and size
+- Filter by request type
+- Export network data as HAR file
+- Click any request to see full details
 
-<ul>
-<li>Intercepts and logs all network requests (fetch and XHR)</li>
-<li>View request/response details, timing, and size</li>
-<li>Filter by request type</li>
-<li>Export network data as HAR file</li>
-<li>Click any request to see full details</li>
-</ul>
+### ⚡ Performance Analyzer
 
-<h3>⚡ Performance Analyzer</h3>
+- Page load metrics (DNS, TCP, SSL, TTFB, download time)
+- Resource timing for all loaded assets
+- Paint timing (First Paint, First Contentful Paint)
+- Memory usage (when available)
+- Export performance data as JSON
 
-<ul>
-<li>Page load metrics (DNS, TCP, SSL, TTFB, download time)</li>
-<li>Resource timing for all loaded assets</li>
-<li>Paint timing (First Paint, First Contentful Paint)</li>
-<li>Memory usage (when available)</li>
-<li>Export performance data as JSON</li>
-</ul>
+### 💬 Console Capture
 
-<h3>💬 Console Capture</h3>
+- Captures all console logs, errors, warnings, and info messages
+- Filter logs by level (log, error, warn, info, debug)
+- View timestamps and stack traces
+- Export console logs as JSON
+- Real-time log streaming
 
-<ul>
-<li>Captures all console logs, errors, warnings, and info messages</li>
-<li>Filter logs by level (log, error, warn, info, debug)</li>
-<li>View timestamps and stack traces</li>
-<li>Export console logs as JSON</li>
-<li>Real-time log streaming</li>
-</ul>
+### 💾 Storage Inspector
 
-<h3>💾 Storage Inspector</h3>
+- View and edit localStorage items
+- View and edit sessionStorage items
+- View and manage cookies
+- Edit storage values directly
+- Delete individual items
 
-<ul>
-<li>View and edit localStorage items</li>
-<li>View and edit sessionStorage items</li>
-<li>View and manage cookies</li>
-<li>Edit storage values directly</li>
-<li>Delete individual items</li>
-</ul>
+### ℹ️ Page Information
 
-<h3>ℹ️ Page Information</h3>
+- Complete page metadata (URL, title, protocol, host)
+- All meta tags with content
+- Viewport dimensions and device information
+- Security context information
+- User agent and browser details
 
-<ul>
-<li>Complete page metadata (URL, title, protocol, host)</li>
-<li>All meta tags with content</li>
-<li>Viewport dimensions and device information</li>
-<li>Security context information</li>
-<li>User agent and browser details</li>
-</ul>
+### ♿ Accessibility Audit
 
-<h3>♿ Accessibility Audit</h3>
+- Accessibility score (0-100)
+- Detects missing alt text on images
+- Checks heading structure (H1-H6)
+- Validates form labels and ARIA attributes
+- Color contrast analysis
+- Export accessibility report as JSON
 
-<ul>
-<li>Accessibility score (0-100)</li>
-<li>Detects missing alt text on images</li>
-<li>Checks heading structure (H1-H6)</li>
-<li>Validates form labels and ARIA attributes</li>
-<li>Color contrast analysis</li>
-<li>Export accessibility report as JSON</li>
-</ul>
+### 🔎 SEO Analyzer
 
-<h3>🔎 SEO Analyzer</h3>
+- SEO score with detailed analysis
+- Meta tags validation (title, description, Open Graph)
+- Heading structure analysis
+- Image alt text checking
+- Link analysis (internal/external)
+- Structured data (JSON-LD) detection
+- Export SEO report as JSON
 
-<ul>
-<li>SEO score with detailed analysis</li>
-<li>Meta tags validation (title, description, Open Graph)</li>
-<li>Heading structure analysis</li>
-<li>Image alt text checking</li>
-<li>Link analysis (internal/external)</li>
-<li>Structured data (JSON-LD) detection</li>
-<li>Export SEO report as JSON</li>
-</ul>
+### 🔒 Security Checker
 
-<h3>🔒 Security Checker</h3>
+- Security score assessment
+- HTTPS and secure context detection
+- Mixed content detection
+- Security headers information
+- Security recommendations
+- Export security report as JSON
 
-<ul>
-<li>Security score assessment</li>
-<li>HTTPS and secure context detection</li>
-<li>Mixed content detection</li>
-<li>Security headers information</li>
-<li>Security recommendations</li>
-<li>Export security report as JSON</li>
-</ul>
+### 📸 Screenshot
 
-<h3>📸 Screenshot</h3>
+- Capture full page screenshots
+- Capture individual element screenshots
+- Automatic download as PNG
+- Available via command palette
 
-<ul>
-<li>Capture full page screenshots</li>
-<li>Capture individual element screenshots</li>
-<li>Automatic download as PNG</li>
-<li>Available via command palette</li>
-</ul>
+## Installation
 
-<h2>Installation</h2>
+### Quick Install
 
-<h3>Quick Install</h3>
+**Open the installation page to get started:**
 
-<p><strong>Open the installation page to get started:</strong></p>
+<div align="center" style="margin: 20px 0; padding: 20px;">
 
-<div class="button-container">
-<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" class="bookmarklet-button">🚀 Open Installation Page</a>
+<a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1px solid #218838; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🚀
+Open Installation Page</a>
+
 </div>
 
-<blockquote>
-<p><strong>Note:</strong> Click the button above to open the installation page in your browser with a draggable bookmarklet button and detailed instructions.</p>
-</blockquote>
+> **Note:** Click the button above to open the installation page in your browser
+> with a draggable bookmarklet button and detailed instructions.
 
-<h3>Manual Installation (Alternative Method)</h3>
+### Manual Installation (Alternative Method)
 
-<p>If you prefer to install manually:</p>
+If you prefer to install manually:
 
-<p><strong>Step 1: Get the Bookmarklet Code</strong></p>
+**Step 1: Get the Bookmarklet Code**
 
-<ol>
-<li>Open the <a href="https://damionrashford.github.io/page-analyzer/install.html" target="_blank">installation page</a></li>
-<li>Right-click on the bookmarklet button and select "Copy link address"</li>
-<li>This copies the bookmarklet code to your clipboard</li>
-</ol>
+1. Open the
+   [installation page](https://damionrashford.github.io/page-analyzer/install.html)
+2. Right-click on the bookmarklet button and select "Copy link address"
+3. This copies the bookmarklet code to your clipboard
 
-<p><strong>Step 2: Create the Bookmark</strong></p>
+**Step 2: Create the Bookmark**
 
-<p><strong>Chrome/Edge:</strong></p>
+**Chrome/Edge:**
 
-<ol>
-<li>Right-click your bookmarks bar</li>
-<li>Select "Add page" or "Add bookmark"</li>
-<li>Name it "Page Analyzer"</li>
-<li>Paste the bookmarklet code into the URL field</li>
-<li>Click "Save"</li>
-</ol>
+1. Right-click your bookmarks bar
+2. Select "Add page" or "Add bookmark"
+3. Name it "Page Analyzer"
+4. Paste the bookmarklet code into the URL field
+5. Click "Save"
 
-<p><strong>Firefox:</strong></p>
+**Firefox:**
 
-<ol>
-<li>Right-click your bookmarks toolbar</li>
-<li>Select "New Bookmark"</li>
-<li>Name it "Page Analyzer"</li>
-<li>Paste the bookmarklet code into the "Location" field</li>
-<li>Click "Save"</li>
-</ol>
+1. Right-click your bookmarks toolbar
+2. Select "New Bookmark"
+3. Name it "Page Analyzer"
+4. Paste the bookmarklet code into the "Location" field
+5. Click "Save"
 
-<p><strong>Safari:</strong></p>
+**Safari:**
 
-<ol>
-<li>Right-click your bookmarks bar</li>
-<li>Select "Add Bookmark"</li>
-<li>Name it "Page Analyzer"</li>
-<li>Edit the bookmark and paste the code into the URL field</li>
-</ol>
+1. Right-click your bookmarks bar
+2. Select "Add Bookmark"
+3. Name it "Page Analyzer"
+4. Edit the bookmark and paste the code into the URL field
 
-<h2>Usage</h2>
+## Usage
 
-<h3>Opening Page Analyzer</h3>
+### Opening Page Analyzer
 
-<ol>
-<li>Navigate to any webpage you want to analyze</li>
-<li>Click the "Page Analyzer" bookmarklet in your bookmarks bar</li>
-<li>The analyzer panel will appear in the bottom-right corner</li>
-</ol>
+1. Navigate to any webpage you want to analyze
+2. Click the "Page Analyzer" bookmarklet in your bookmarks bar
+3. The analyzer panel will appear in the bottom-right corner
 
-<h3>Using the Panel</h3>
+### Using the Panel
 
-<ul>
-<li><strong>Drag</strong>: Click and drag the header to move the panel</li>
-<li><strong>Resize</strong>: Drag the bottom-right corner to resize</li>
-<li><strong>Minimize</strong>: Click the minimize button (−) to collapse</li>
-<li><strong>Maximize</strong>: Click the maximize button (□) to fill the screen</li>
-<li><strong>Close</strong>: Click the close button (×) to hide the panel</li>
-</ul>
+- **Drag**: Click and drag the header to move the panel
+- **Resize**: Drag the bottom-right corner to resize
+- **Minimize**: Click the minimize button (−) to collapse
+- **Maximize**: Click the maximize button (□) to fill the screen
+- **Close**: Click the close button (×) to hide the panel
 
-<h3>Navigating Tabs</h3>
+### Navigating Tabs
 
-<p>Click any tab at the top to switch between tools:</p>
+Click any tab at the top to switch between tools:
 
-<ul>
-<li>🔍 <strong>DOM</strong> - Inspect page elements</li>
-<li>🌐 <strong>Network</strong> - Monitor network requests</li>
-<li>⚡ <strong>Performance</strong> - View performance metrics</li>
-<li>💬 <strong>Console</strong> - View console logs</li>
-<li>💾 <strong>Storage</strong> - Inspect storage</li>
-<li>ℹ️ <strong>Info</strong> - Page information</li>
-<li>♿ <strong>A11y</strong> - Accessibility audit</li>
-<li>🔎 <strong>SEO</strong> - SEO analysis</li>
-<li>🔒 <strong>Security</strong> - Security check</li>
-</ul>
+- 🔍 **DOM** - Inspect page elements
+- 🌐 **Network** - Monitor network requests
+- ⚡ **Performance** - View performance metrics
+- 💬 **Console** - View console logs
+- 💾 **Storage** - Inspect storage
+- ℹ️ **Info** - Page information
+- ♿ **A11y** - Accessibility audit
+- 🔎 **SEO** - SEO analysis
+- 🔒 **Security** - Security check
 
-<h3>Keyboard Shortcuts</h3>
+### Keyboard Shortcuts
 
-<ul>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd></strong> - Open command palette (quick access to all features)</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></strong> - Switch to DOM Inspector</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></strong> - Switch to Network Monitor</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></strong> - Switch to Performance</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></strong> - Switch to Console</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></strong> - Switch to Storage</li>
-<li><strong><kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></strong> - Toggle dark/light theme</li>
-<li><strong><kbd>Escape</kbd></strong> - Close command palette or close panel</li>
-</ul>
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd>** - Open command palette (quick access to
+  all features)
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>** - Switch to DOM
+  Inspector
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>** - Switch to Network
+  Monitor
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>** - Switch to
+  Performance
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>** - Switch to Console
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>** - Switch to Storage
+- **<kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>** - Toggle dark/light
+  theme
+- **<kbd>Escape</kbd>** - Close command palette or close panel
 
-<h3>Command Palette</h3>
+### Command Palette
 
-<p>Press <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> to open the command palette. Type to search for:</p>
+Press <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> to open the command palette. Type to
+search for:
 
-<ul>
-<li>Open any tool tab</li>
-<li>Toggle theme</li>
-<li>Export data</li>
-<li>Take screenshots</li>
-<li>And more...</li>
-</ul>
+- Open any tool tab
+- Toggle theme
+- Export data
+- Take screenshots
+- And more...
 
-<p>Use arrow keys to navigate, Enter to select, Escape to close.</p>
+Use arrow keys to navigate, Enter to select, Escape to close.
 
-<h3>Exporting Data</h3>
+### Exporting Data
 
-<p>Most tools include export functionality:</p>
+Most tools include export functionality:
 
-<ul>
-<li><strong>Network</strong>: Export as HAR file</li>
-<li><strong>Performance</strong>: Export as JSON</li>
-<li><strong>Console</strong>: Export logs as JSON</li>
-<li><strong>Accessibility</strong>: Export report as JSON</li>
-<li><strong>SEO</strong>: Export report as JSON</li>
-<li><strong>Security</strong>: Export report as JSON</li>
-</ul>
+- **Network**: Export as HAR file
+- **Performance**: Export as JSON
+- **Console**: Export logs as JSON
+- **Accessibility**: Export report as JSON
+- **SEO**: Export report as JSON
+- **Security**: Export report as JSON
 
-<p>Click the "Export" button in any tool to download the data.</p>
+Click the "Export" button in any tool to download the data.
 
-<h3>Taking Screenshots</h3>
+### Taking Screenshots
 
-<ul>
-<li><strong>Full Page</strong>: Use command palette (<kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd>) → "Take Screenshot"</li>
-<li><strong>Element Screenshot</strong>: In DOM Inspector, select an element, then click "Screenshot Element" button</li>
-</ul>
+- **Full Page**: Use command palette (<kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd>) →
+  "Take Screenshot"
+- **Element Screenshot**: In DOM Inspector, select an element, then click
+  "Screenshot Element" button
 
-<h3>Theme</h3>
+### Theme
 
-<p>The analyzer automatically detects your system theme preference. You can manually toggle between dark and light themes:</p>
+The analyzer automatically detects your system theme preference. You can
+manually toggle between dark and light themes:
 
-<ul>
-<li>Use keyboard shortcut: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></li>
-<li>Or use command palette: <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> → "Toggle Theme"</li>
-</ul>
+- Use keyboard shortcut: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
+- Or use command palette: <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> → "Toggle Theme"
 
-<p>Your theme preference is saved and will persist across sessions.</p>
+Your theme preference is saved and will persist across sessions.
 
-<h2>Tips</h2>
+## Tips
 
-<ol>
-<li><strong>DOM Inspector</strong>: Hover over elements on the page to see them highlighted. Click to select and view properties.</li>
-<li><strong>Network Monitor</strong>: Starts capturing immediately when opened. Click "Clear" to reset the log.</li>
-<li><strong>Performance</strong>: Metrics are calculated from page load. Refresh the page after opening the analyzer for most accurate results.</li>
-<li><strong>Console</strong>: Captures logs in real-time. Use the filter dropdown to show only specific log levels.</li>
-<li><strong>Storage</strong>: Double-click any value to edit it. Changes are saved immediately.</li>
-<li><strong>Accessibility/SEO/Security</strong>: Click "Export" to save detailed reports for documentation or sharing.</li>
-</ol>
+1. **DOM Inspector**: Hover over elements on the page to see them highlighted.
+   Click to select and view properties.
+2. **Network Monitor**: Starts capturing immediately when opened. Click "Clear"
+   to reset the log.
+3. **Performance**: Metrics are calculated from page load. Refresh the page
+   after opening the analyzer for most accurate results.
+4. **Console**: Captures logs in real-time. Use the filter dropdown to show only
+   specific log levels.
+5. **Storage**: Double-click any value to edit it. Changes are saved
+   immediately.
+6. **Accessibility/SEO/Security**: Click "Export" to save detailed reports for
+   documentation or sharing.
 
-<h2>Browser Compatibility</h2>
+## Browser Compatibility
 
-<p>Page Analyzer works in all modern browsers:</p>
+Page Analyzer works in all modern browsers:
 
-<ul>
-<li>Chrome/Edge (Chromium) - Full support</li>
-<li>Firefox - Full support</li>
-<li>Safari - Full support</li>
-</ul>
+- Chrome/Edge (Chromium) - Full support
+- Firefox - Full support
+- Safari - Full support
 
-<h2>Privacy</h2>
+## Privacy
 
-<p>Page Analyzer runs entirely in your browser. No data is sent to any external servers. All analysis happens locally on your device.</p>
+Page Analyzer runs entirely in your browser. No data is sent to any external
+servers. All analysis happens locally on your device.
 
-<h2>Troubleshooting</h2>
+## Troubleshooting
 
 <dl>
 <dt><strong>Panel doesn't appear:</strong></dt>
@@ -437,13 +302,11 @@ dd {
 </dd>
 </dl>
 
-<h2>Support</h2>
+## Support
 
-<p>For issues, feature requests, or contributions, please visit the <a href="https://github.com/damionrashford/page-analyzer">GitHub repository</a>.</p>
+For issues, feature requests, or contributions, please visit the
+[GitHub repository](https://github.com/damionrashford/page-analyzer).
 
-<h2>License</h2>
+## License
 
-<p>MIT License - See LICENSE file for details.</p>
-
-</body>
-</html>
+MIT License - See LICENSE file for details.
